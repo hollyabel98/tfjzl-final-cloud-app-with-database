@@ -1,6 +1,5 @@
 
 	from django.contrib import admin
-	# <HINT> Import any new Models here
 	from .models import Course, Lesson, Instructor, Learner, Question, Choice, Submission
 
 	class LessonInline(admin.StackedInline):
@@ -15,7 +14,6 @@
 		model = Question
 		extra = 2
 
-	
 	class CourseAdmin(admin.ModelAdmin):
 		inlines = [LessonInline]
 		list_display = ('name', 'pub_date')
